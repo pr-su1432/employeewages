@@ -12,6 +12,7 @@ namespace employeewages
             employeeispresentornot.addPartTimeWage();
             employeeispresentornot.EmpWageUsingSwitch();
             employeeispresentornot.calculateMonthlyWage();
+            employeeispresentornot.calculateTotalEmpWage();
         }
 
     }

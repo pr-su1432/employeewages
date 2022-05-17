@@ -15,6 +15,9 @@ namespace employeewages
         int empWage = 0;
         int totalEmpWage = 0;
         int NUM_OF_WORKING_DAYS = 10;
+        int totalEmpHrs = 0;
+        int MAX_HRS_IN_MONTH = 40;
+        int totalWorkingDays = 0;
         public void presentorabsent()
         {
             
@@ -127,10 +130,43 @@ namespace employeewages
             }
             Console.WriteLine("Total employee wage for month " + totalEmpWage + "\n");
         }
+        public void calculateTotalEmpWage()
+        {
+            while (totalEmpHrs < MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            {
+                totalWorkingDays++;
+                Random rand = new Random();
+                int empCheck = rand.Next(0, 3);
+                switch (empCheck)
+                {
+                    case 1:
+                        Console.WriteLine("Employee is present full time");
+                        empHrs = 8;
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Employee is present part time");
+                        empHrs = 4;
+                        break;
+
+                    default:
+                        Console.WriteLine("Employee is absent");
+                        empHrs = 0;
+                        break;
+                }
+                totalEmpHrs += empHrs;
+                Console.WriteLine("Days " + totalWorkingDays + " " + "Employee Hours " + totalEmpHrs);
+            }
+            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HRS;
+            Console.WriteLine("Total employee wage " + totalEmpWage);
+        }
+
     }
-
-
-
 }
+    
+
+
+
+
 
 
