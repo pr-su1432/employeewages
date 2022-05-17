@@ -8,11 +8,14 @@ namespace employeewages
 {
     class employeeispresentornot
     {
+        int IS_FULL_TIME = 1;
+        int IS_PART_TIME = 0;
+        int empHrs = 0;
+        int EMP_RATE_PER_HRS = 20;
+        int empWage = 0;
         public void presentorabsent()
         {
-            //constants
-            int IS_FULL_TIME = 1;
-            int IS_PART_TIME = 0;
+            
             Random random = new Random();
             //computation
             int empCheck = random.Next(0, 3);
@@ -24,6 +27,24 @@ namespace employeewages
             {
                 Console.WriteLine("Employee is absent");
             }
+
+        }
+        public void dailyWage()
+        {
+            Random rand = new Random();
+            int empCheck = rand.Next(0, 3);
+            if (empCheck == 1)
+            {
+                Console.WriteLine("Employee is present");
+                empHrs = 8;
+            }
+            else
+            {
+                Console.WriteLine("Employee is absent");
+                empHrs = 0;
+            }
+            empWage = empHrs * EMP_RATE_PER_HRS;
+            Console.WriteLine("Daily employee wage " + empWage + "\n");
 
         }
     }

@@ -8,6 +8,8 @@ namespace employeewages
         {
             employeeispresentornot employeeispresentornot = new employeeispresentornot();
             employeeispresentornot.presentorabsent();
+            employeeispresentornot.dailyWage();
         }
+
     }
 }
