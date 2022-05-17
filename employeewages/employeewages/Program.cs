@@ -9,10 +9,6 @@ namespace employeewages
             employeeispresentornot employeeispresentornot = new employeeispresentornot();
             employeeispresentornot.presentorabsent();
             employeeispresentornot.dailyWage();
-            employeeispresentornot.addPartTimeWage();
-            employeeispresentornot.EmpWageUsingSwitch();
-            employeeispresentornot.calculateMonthlyWage();
-            employeeispresentornot.calculateTotalEmpWage();
         }
 
     }
